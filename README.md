@@ -1,2 +1,2 @@
 # js-play
-A safe place to play with JavaScrip
+A safe place to play with JavaScript
