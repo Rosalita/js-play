@@ -44,6 +44,12 @@ test('The f**king clock ticks every minute', () => {
   expect(myClock.hasTicked()).toBeTruthy()
 });
 
+test('The B*stard clock will not tick until a minute has passed', () => {
+  const myClock = new Clock("13:41:27")
+  expect(myClock.hasTicked()).toBeFalsy()
+})
+
+
 
 // Tick every minute
 // Beep every hour
