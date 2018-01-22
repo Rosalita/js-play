@@ -41,9 +41,7 @@ test('The f**king clock ticks every minute', () => {
   // adding a hasTicked method to the Clock
   // expecting that if the time ends in 00 hasTicked is true
   // expecting that if hasTicked doesn't end in 00 that hasTicked is false
-//  expect(myClock.hasTicked()).toEqual("26")
   expect(myClock.hasTicked()).toBeTruthy()
-  //
 });
 
 
