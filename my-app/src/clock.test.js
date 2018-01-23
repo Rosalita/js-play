@@ -49,7 +49,26 @@ test('The B*stard clock will not tick until a minute has passed', () => {
   expect(myClock.hasTicked()).toBeFalsy()
 })
 
+test('Can read minutes on the clock', () =>{
+  const myClock = new Clock ("10:11:12")
+  // 1. decide the inputs and outputs
+  // input is the time
+  // output is the minutes
+  // 2. decide function signature
+  // it will be a method on the Clock class to getMinutes
+  // it will return the minutes
+  expect(myClock.getMinutes()).toEqual("11")
+})
 
+test('The clock beeps every hour', () => {
+  const myClock = new Clock("09:00:00")
+  expect(myClock.hasBeeped()).toBeTruthy()
+})
+
+test('The clock will not beep unless an hour has passed', () =>{
+  const myClock = new Clock("09:05:00")
+  expect(myClock.hasBeeped()).toBeFalsy()
+})
 
 // Tick every minute
 // Beep every hour

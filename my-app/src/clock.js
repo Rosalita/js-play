@@ -10,8 +10,13 @@ class Clock {
   }
 
   getSeconds(){
-    return this._time.slice(6,8);
+    return this.getTime().slice(6,8);
   }
+
+  getMinutes(){
+    return this.getTime().slice(3,5);
+  }
+
 
   hasTicked(){
     if (this.getSeconds() === "00"){
@@ -20,6 +25,15 @@ class Clock {
       return false
     }
   }
+
+  hasBeeped(){
+    if (this.getMinutes() === "00" && this.getSeconds() == "00"){
+      return true
+    } else{
+      return false
+    }
+  }
+
 }
 
 
