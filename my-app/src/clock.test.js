@@ -27,7 +27,7 @@ test('Can read seconds on the clock', () =>{
   expect(myClock.getSeconds()).toEqual("26")
 })
 
-test('The f**king clock ticks every minute', () => {
+test('The clock ticks every minute', () => {
   const myClock = new Clock("08:14:00")
   // 1. decide the inputs and outputs
   // input is the time
@@ -44,12 +44,12 @@ test('The f**king clock ticks every minute', () => {
   expect(myClock.hasTicked()).toBeTruthy()
 });
 
-test('The B*stard clock will not tick until a minute has passed', () => {
+test('The clock will not tick until a minute has passed', () => {
   const myClock = new Clock("13:41:27")
   expect(myClock.hasTicked()).toBeFalsy()
 })
 
-test('Can read minutes on the clock', () =>{
+test('Can read minutes on the clock', () => {
   const myClock = new Clock ("10:11:12")
   // 1. decide the inputs and outputs
   // input is the time
@@ -65,10 +65,11 @@ test('The clock beeps every hour', () => {
   expect(myClock.hasBeeped()).toBeTruthy()
 })
 
-test('The clock will not beep unless an hour has passed', () =>{
+test('The clock will not beep unless an hour has passed', () => {
   const myClock = new Clock("09:05:00")
   expect(myClock.hasBeeped()).toBeFalsy()
 })
+
 
 // Tick every minute
 // Beep every hour
