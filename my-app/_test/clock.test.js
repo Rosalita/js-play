@@ -1,4 +1,4 @@
-const Clock = require("./clock.js").Clock
+const Clock = require("../src/clock.js").Clock
 
 
 test ('There is a clock that has a time', () => {
